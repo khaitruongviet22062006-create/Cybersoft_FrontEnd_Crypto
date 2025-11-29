@@ -1,0 +1,126 @@
+* {
+    /*mẫu chung áp dụng cho tất cả*/
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    /* border-box: with sẽ bao chiều rộng của phần nội dung + padding + border
+    content-box: with chỉ bao chiều rộng của phần nội dung
+        VD: width: 300px;
+            padding: 50px;
+            border: 50px solid red;
+        box-sizing: border-box: tổng chiều rộng = 300px
+        box-sizing: content-box: tổng chiều rộng = 300 + 50 + 50 =400px
+    */
+}
+
+body {
+    color: #636363;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+
+
+
+
+
+
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+}
+
+
+.head {
+    max-width: 80%;
+    margin: auto;
+
+
+}
+
+.head__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+
+.head__content>nav {
+    display: flex;
+    align-items: center;
+
+}
+
+
+
+.head__content>nav>ul {
+    display: flex;
+    margin-right: 30px;
+
+}
+
+.head__content>nav>ul>li {
+    list-style: none;
+    padding: 55px 15px;
+
+
+}
+
+
+
+.head__content>nav>ul>li>a {
+    text-decoration: none;
+    color: #070120;
+    text-transform: capitalize;
+    font-size: 13px;
+    font-weight: 600;
+    transition: all 0.5s;
+}
+
+.head__content>nav>ul>li:hover a {
+    color: #f55f8d;
+}
+
+@keyframes hieuung {
+    from {
+        transform: translateY(-10px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+.head__content>nav>ul>li span {
+    display: inline-block;
+}
+.head__content>nav>ul>li:hover span {
+    animation: hieuung 0.5s forwards;
+
+}
+
+.btn-gradient {
+    padding: 20px 35px;
+    font-size: 15px;
+    font-weight: 500;
+    background-image: linear-gradient(to right, #f55f8d 0, #f8ae56 51%, #f55f8d 100%);
+    background-size: 200%;
+    border: 1px solid transparent;
+    transition: all 0.5s;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    text-transform: uppercase;
+    line-height: 1.2;
+    transition: 0.5s all ease-in-out;
+}
+
+.btn-gradient:hover {
+    background-position: right center;
+}
